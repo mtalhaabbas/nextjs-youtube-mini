@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Spinner from "../components/Spinner";
 import Head from "next/head";
+import Link from 'next/link'
 const Home = () => {
   const [q, setq] = useState({
     search:''
@@ -26,18 +27,18 @@ const Home = () => {
   return (
     <>
       <Head>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />  </Head>   
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />  </Head>   
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="/">Mini YouTube</a>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+  <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <Link className="navbar-brand" href="/">Mini YouTube</Link>
+    <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
     </ul>
-    <div class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-3" type="search" onClick={onChange} name="search" placeholder="Search" aria-label="Search" required />
-      <button class="btn btn-outline-success my-2 my-sm-0" onClick={fetchData} type="submit">Search</button>
+    <div className="form-inline my-2 my-lg-0">
+      <input className="form-control mr-sm-3" type="search" onClick={onChange} name="search" placeholder="Search" aria-label="Search" required />
+      <button className="btn btn-outline-success my-2 my-sm-0" onClick={fetchData} type="submit">Search</button>
     </div>
   </div>
 </nav>
@@ -52,7 +53,7 @@ const Home = () => {
                  return (
                     <>
                      <div className="my-3 ml-3">
-                     <iframe width="490" height="300" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="490" height="300" src={video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                      </div>    
                     </>
                   );

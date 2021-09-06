@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Spinner = () => {
     return (
         <div className="text-center">
-            <Image className="w-1/4" src={loading} />
+            <Image className="w-1/4" alt="spinner" src={loading} />
         </div>
     )
 }
